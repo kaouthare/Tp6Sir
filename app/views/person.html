@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Person</title>
+</head>
+<body>
+<div >
+  Nom :         <input type="text" name="Nom" ng-model="user.name"><BR>
+  Prénom :    <input type="text" name="prenom" ng-model="user.prenom"><BR>
+  Email :        <input type="text" name="email"  ng-model="user.email"><BR>
+  <button ng-click="submitForm()">Ajouter</button>
+</div>
+<table class="table table-bordered table-condensed table-striped">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Prenom</th>
+    <th>Nom</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat = "pers in persons">
+    <td>{{pers.id}}</td>
+    <td>{{pers.nom}}</td>
+    <td>{{pers.prenom}}</td>
+    <td>{{pers.email}}</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

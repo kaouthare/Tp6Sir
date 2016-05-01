@@ -8,6 +8,9 @@
  *
  * Main module of the application.
  */
+
+
+
 angular
   .module('yomanApp', [
     'ngAnimate',
@@ -15,7 +18,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -29,6 +33,27 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/homes', {
+              templateUrl: 'views/homes.html',
+              controller: 'HomesCtrl',
+              controllerAs: 'homes'
+         })
+        .when('/people', {
+                     templateUrl: 'views/person.html',
+                     controller: 'PersonCtrl',
+                     controllerAs: 'person'
+          })
+        .when('/electro_devices', {
+                     templateUrl: 'views/electro_devices.html',
+                     controller: 'ElectroDevicesCtrl',
+                     controllerAs: 'electro_devices'
+        })
+         .when('/heaters', {
+                             templateUrl: 'views/heaters.html',
+                             controller: 'HeatersCtrl',
+                             controllerAs: 'heater'
+                })
+
       .otherwise({
         redirectTo: '/'
       });

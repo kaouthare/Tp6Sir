@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opower Homes</title>
+</head>
+<body>
+<div >
+  id :         <input type="text" name="idhome" ng-model="home.id"><BR>
+  Nom :    <input type="text" name="nomHome" ng-model="home.nom"><BR>
+  Taille :    <input type="text" name="tailleHome" ng-model="home.taille"><BR>
+  Nombre de pièce :    <input type="text" name="NbPieceHome" ng-model="home.nbpiece"><BR>
+
+  <button ng-click="submitForm()">Ajouter</button>
+</div>
+
+<table BORDER="1" class="table table-striped table-bordered">
+  <thead>
+  <tr>
+    <td>id</td>
+    <td>Nom</td>
+    <td>Taille</td>
+    <td> Nombre de pièce</td>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="line in Homes">
+    <td>{{ line.id }}</td>
+    <td>{{ line.nom }}</td>
+    <td>{{ line.taille }}</td>
+    <td>{{ line.NbPiece }}</td>
+
+
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

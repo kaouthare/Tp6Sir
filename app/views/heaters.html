@@ -1,0 +1,31 @@
+<div>
+
+  <div text-align: center; xmlns:text-align="http://www.w3.org/1999/xhtml">
+
+    <h1>OPower Heaters</h1>
+    <div >
+      id :         <input type="text" name="idHeater" ng-model="heater.id"><BR>
+      conso :    <input type="text" name="consoHeater" ng-model="heater.conso"><BR>
+      <button ng-click="submitForm()">Ajouter</button>
+    </div>
+
+    <table BORDER="1" class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <td>id</td>
+        <td>conso</td>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="line in heaters">
+        <td>{{ line.id }}</td>
+        <td>{{ line.conso }}</td>
+
+
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

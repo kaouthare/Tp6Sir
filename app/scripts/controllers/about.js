@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc function
- * @name yomanApp.controller:AboutCtrl
+ * @name opowerApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
  * Controller of the yomanApp
